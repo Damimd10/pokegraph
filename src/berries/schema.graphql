@@ -1,0 +1,7 @@
+type Berry {
+  id: Int!
+  name: String!
+}
+type Query {
+  berries(id: String!): Berry
+}
