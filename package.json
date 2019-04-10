@@ -2,7 +2,7 @@
   "name": "pokgraph",
   "version": "1.0.0",
   "scripts": {
-    "start": "node ./src"
+    "start": "nodemon --exec ts-node src/index.ts"
   },
   "description": "Pokemon GraphQL API",
   "main": "index.js",
@@ -13,5 +13,11 @@
     "axios": "^0.18.0",
     "graphql-yoga": "^1.17.4",
     "merge-graphql-schemas": "^1.5.8"
+  },
+  "devDependencies": {
+    "@types/node": "^11.13.2",
+    "nodemon": "^1.18.11",
+    "ts-node": "^8.0.3",
+    "typescript": "^3.4.3"
   }
 }
