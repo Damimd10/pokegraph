@@ -1,6 +1,6 @@
-const { GraphQLServer } = require('graphql-yoga');
-const { fileLoader, mergeTypes } = require('merge-graphql-schemas');
-const path = require('path');
+import { GraphQLServer } from 'graphql-yoga';
+import { fileLoader, mergeTypes } from 'merge-graphql-schemas';
+import * as path from 'path';
 
 const resolversArray = fileLoader(path.join(__dirname, './**/resolvers.*'));
 const typesArray = fileLoader(path.join(__dirname, './**/*.graphql'));
