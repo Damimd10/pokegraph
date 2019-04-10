@@ -1,0 +1,17 @@
+{
+  "name": "pokgraph",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node ./src"
+  },
+  "description": "Pokemon GraphQL API",
+  "main": "index.js",
+  "author": "Damian <damianmdst@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "graphql-yoga": "^1.17.4",
+    "merge-graphql-schemas": "^1.5.8"
+  }
+}
