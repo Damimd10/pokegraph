@@ -1,0 +1,4 @@
+type NamedAPIResource {
+  name: String
+  url: String
+}

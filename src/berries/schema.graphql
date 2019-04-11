@@ -1,7 +1,18 @@
 type Berry {
   id: Int!
   name: String!
+  growthTime: Int!
+  maxHarvest: Int!
+  naturalGiftPower: Int!
+  size: Int!
+  smoothness: Int!
+  soilDryness: Int!
+  firmness: NamedAPIResource
+  flavors: [BerryFlavorMap]
+  item: NamedAPIResource
+  naturalGiftType: NamedAPIResource
 }
+
 type Query {
   berries(id: String!): Berry
 }
