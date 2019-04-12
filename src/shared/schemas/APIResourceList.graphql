@@ -1,0 +1,6 @@
+type APIResourceList {
+  count: Int
+  next: String
+  previous: String
+  results: [NamedAPIResource]
+}

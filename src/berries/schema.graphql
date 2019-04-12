@@ -14,5 +14,6 @@ type Berry {
 }
 
 type Query {
-  berries(id: String!): Berry
+  getAllBerries(offset: Int, limit: Int): APIResourceList
+  getBerry(id: String!): Berry
 }
