@@ -1,15 +1,9 @@
-import getPokeApi from '../shared/service/api';
+import getPokeApi, {
+  IExtraParams,
+  IPaginationParams,
+} from '../shared/service/api';
 import IAPIResourceList from '../models/IAPIResourceList';
 import IBerry from '../models/IBerry';
-
-type IPaginationParams = {
-  offset: number;
-  limit: number;
-};
-
-type IParamId = {
-  id: number | string;
-};
 
 const endpoint = 'berry';
 
@@ -20,5 +14,5 @@ export const getAll = async (offset: number, limit: number) =>
 
 export const getBerryById = async (id: number | string) => {
   const getById = getPokeApi(`${endpoint}/${id}`);
-  return await getById<IParamId, IBerry>({ id });
+  return await getById<IExtraParams, IBerry>({ id });
 };

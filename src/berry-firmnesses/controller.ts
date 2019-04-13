@@ -1,15 +1,9 @@
-import getPokeApi from '../shared/service/api';
+import getPokeApi, {
+  IPaginationParams,
+  IExtraParams,
+} from '../shared/service/api';
 import IBerryFirmness from '../models/IBerryFirmness';
 import IAPIResourceList from '../models/IAPIResourceList';
-
-type IPaginationParams = {
-  offset: number;
-  limit: number;
-};
-
-type IParamId = {
-  id: number | string;
-};
 
 const endpoint = 'berry-firmness';
 
@@ -23,5 +17,5 @@ export const getAll = async (offset: number, limit: number) =>
 
 export const getBerryFirmnessById = async (id: number | string) => {
   const getById = getPokeApi(`${endpoint}/${id}`);
-  return await getById<IParamId, IBerryFirmness>({ id });
+  return await getById<IExtraParams, IBerryFirmness>({ id });
 };
