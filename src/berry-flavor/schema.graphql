@@ -1,0 +1,12 @@
+type BerryFlavor {
+  id: Int
+  name: String
+  berries: [FlavorBerryMap]
+  contestType: NamedAPIResource
+  names: [Name]
+}
+
+type Query {
+  getAllBerryFlavor(offset: Int, limit: Int): APIResourceList
+  getBerryFlavor(id: String!): BerryFlavor
+}
