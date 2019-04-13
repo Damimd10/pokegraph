@@ -1,0 +1,11 @@
+type BerryFirmnesses {
+  id: Int
+  name: String
+  berries: [NamedAPIResource]
+  names: [Name]
+}
+
+type Query {
+  getAllBerryFirmness(offset: Int, limit: Int): APIResourceList
+  getBerryFirmness(id: String!): BerryFirmnesses
+}
