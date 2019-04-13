@@ -4,7 +4,7 @@ import { compose, prop } from 'ramda';
 
 type IService = (
   url: string
-) => (endpoint: string) => <T>(params: T) => Promise<AxiosResponse<any>>;
+) => (endpoint: string) => <T, K>(params: T) => Promise<AxiosResponse<K>>;
 
 const getFromAPI: IService = baseURL => endpoint => params =>
   axios.get(`${baseURL}${endpoint}`, { params }).then(
