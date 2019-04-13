@@ -1,0 +1,12 @@
+type Contest {
+  id: Int!
+  name: String
+  berry_flavor: NamedAPIResource
+  names: [ContestName]
+}
+
+type ContestName {
+  name: String
+  color: String
+  language: NamedAPIResource
+}

@@ -4,6 +4,6 @@ export default {
   Query: {
     getAllBerryFirmness: (_, { offset = 0, limit = 20 }) =>
       getAll(offset, limit),
-    getBerryFirmnessById: (_, { id }) => getBerryFirmnessById(id),
+    getBerryFirmness: (_, { id }) => getBerryFirmnessById(id),
   },
 };
