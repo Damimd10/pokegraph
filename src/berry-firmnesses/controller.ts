@@ -9,13 +9,25 @@ const endpoint = 'berry-firmness';
 
 const getBerryFirmness = getPokeApi(endpoint);
 
-export const getAll = async (offset: number, limit: number) =>
-  await getBerryFirmness<IPaginationParams, IAPIResourceList>({
-    offset,
-    limit,
-  });
+export const getAll = async (
+  offset: number,
+  limit: number
+): Promise<IBerryFirmness[]> => {
+  const { results } = await getBerryFirmness<
+    IPaginationParams,
+    IAPIResourceList
+  >({ offset, limit });
 
-export const getBerryFirmnessById = async (id: number | string) => {
+  const mappedPromises = results.map(
+    async ({ name }) => await getBerryFirmnessById(name)
+  );
+
+  return await Promise.all(mappedPromises);
+};
+
+export const getBerryFirmnessById = async (
+  id: number | string
+): Promise<IBerryFirmness> => {
   const getById = getPokeApi(`${endpoint}/${id}`);
   return await getById<IExtraParams, IBerryFirmness>({ id });
 };

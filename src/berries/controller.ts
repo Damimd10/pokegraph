@@ -25,7 +25,7 @@ export const getAll = async (
   return await Promise.all(mappedPromises);
 };
 
-export const getBerryById = async (id: number | string) => {
+export const getBerryById = async (id: number | string): Promise<IBerry> => {
   const getById = getPokeApi(`${endpoint}/${id}`);
   return await getById<IExtraParams, IBerry>({ id });
 };
