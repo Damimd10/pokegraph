@@ -13,7 +13,7 @@ export type IExtraParams = {
 
 type IService = (
   url: string
-) => (endpoint: string) => <T, K>(params?: T) => Promise<K>;
+) => (endpoint: string) => <K, T>(params?: K) => Promise<T>;
 
 const getFromAPI: IService = baseURL => endpoint => params =>
   axios.get(`${baseURL}${endpoint}`, { params }).then(
