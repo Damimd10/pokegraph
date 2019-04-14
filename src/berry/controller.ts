@@ -9,8 +9,21 @@ const endpoint = 'berry';
 
 const getBerries = getPokeApi(endpoint);
 
-export const getAll = async (offset: number, limit: number) =>
-  await getBerries<IPaginationParams, IAPIResourceList>({ offset, limit });
+export const getAll = async (
+  offset: number,
+  limit: number
+): Promise<IBerry[]> => {
+  const { results } = await getBerries<IPaginationParams, IAPIResourceList>({
+    offset,
+    limit,
+  });
+
+  const mappedPromises = results.map(
+    async ({ name }) => await getBerryById(name)
+  );
+
+  return await Promise.all(mappedPromises);
+};
 
 export const getBerryById = async (id: number | string) => {
   const getById = getPokeApi(`${endpoint}/${id}`);
