@@ -13,6 +13,11 @@ type Berry {
   naturalGiftType: NamedAPIResource
 }
 
+type BerryFlavorMap {
+  potency: Int
+  flavor: NamedAPIResource
+}
+
 type Query {
   getAllBerries(offset: Int, limit: Int): [Berry]
   getBerry(id: String!): Berry

@@ -1,4 +1,0 @@
-type FlavorBerryMap {
-  potency: Int
-  berry: NamedAPIResource
-}

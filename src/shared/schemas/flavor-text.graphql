@@ -1,5 +1,0 @@
-type FlavorText {
-  flavorText: String
-  language: NamedAPIResource
-  version: NamedAPIResource
-}

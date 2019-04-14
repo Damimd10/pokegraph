@@ -1,5 +1,0 @@
-type ContestName {
-  name: String
-  color: String
-  language: NamedAPIResource
-}

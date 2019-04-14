@@ -1,4 +1,0 @@
-type Effect {
-  effect: String
-  language: NamedAPIResource
-}

@@ -6,6 +6,11 @@ type BerryFlavor {
   names: [Name]
 }
 
+type FlavorBerryMap {
+  potency: Int
+  berry: NamedAPIResource
+}
+
 type Query {
   getAllBerryFlavor(offset: Int, limit: Int): APIResourceList
   getBerryFlavor(id: String!): BerryFlavor
