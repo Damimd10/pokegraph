@@ -12,6 +12,6 @@ type ContestName {
 }
 
 type Query {
-  getAllContest(offset: Int, limit: Int): APIResourceList
+  getAllContest(offset: Int, limit: Int): [Contest]
   getContest(id: String!): Contest
 }

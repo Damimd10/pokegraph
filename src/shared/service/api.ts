@@ -15,13 +15,14 @@ type IService = (
   url: string
 ) => (endpoint: string) => <T, K>(params: T) => Promise<K>;
 
-const getFromAPI: IService = baseURL => endpoint => params =>
-  axios.get(`${baseURL}${endpoint}`, { params }).then(
+const getFromAPI: IService = baseURL => endpoint => params => {
+  return axios.get(`${baseURL}${endpoint}`, { params }).then(
     compose(
       camelKeys,
       prop('data')
     )
   );
+};
 
 const getPokeApi = getFromAPI('https://pokeapi.co/api/v2/');
 

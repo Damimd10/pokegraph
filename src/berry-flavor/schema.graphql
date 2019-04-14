@@ -12,6 +12,6 @@ type FlavorBerryMap {
 }
 
 type Query {
-  getAllBerryFlavor(offset: Int, limit: Int): APIResourceList
+  getAllBerryFlavor(offset: Int, limit: Int): [BerryFlavor]
   getBerryFlavor(id: String!): BerryFlavor
 }

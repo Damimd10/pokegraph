@@ -6,6 +6,6 @@ type BerryFirmnesses {
 }
 
 type Query {
-  getAllBerryFirmness(offset: Int, limit: Int): APIResourceList
+  getAllBerryFirmness(offset: Int, limit: Int): [BerryFirmnesses]
   getBerryFirmness(id: String!): BerryFirmnesses
 }

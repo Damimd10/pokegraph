@@ -1,0 +1,11 @@
+type SuperContestEffect {
+  id: Int
+  appeal: Int
+  flavorTextEntries: [FlavorText]
+  moves: [NamedAPIResource]
+}
+
+type Query {
+  getAllSuperContestEffect(offset: Int, limit: Int): [SuperContestEffect]
+  getSuperContestEffect(id: String): [SuperContestEffect]
+}

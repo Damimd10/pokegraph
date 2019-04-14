@@ -11,13 +11,7 @@ type Effect {
   language: NamedAPIResource
 }
 
-type FlavorText {
-  flavorText: String
-  language: NamedAPIResource
-  version: NamedAPIResource
-}
-
 type Query {
-  getAllContestEffects(offset: Int, limit: Int): APIResourceList
+  getAllContestEffects(offset: Int, limit: Int): [ContestEffects]
   getContestEffects(id: String): ContestEffects
 }
