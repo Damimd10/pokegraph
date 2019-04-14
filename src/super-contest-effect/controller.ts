@@ -4,7 +4,6 @@ import getPokeApi, {
 } from '../shared/service/api';
 import ISuperContestEffect from '../models/ISuperContestEffect';
 import IAPIResourceList from '../models/IAPIResourceList';
-import { identity, then, tryCatch } from 'ramda';
 
 const endpoint = 'super-contest-effect';
 
@@ -26,7 +25,7 @@ export const getAll = async (
     try {
       return await getSuperContestEffectById(i + 1);
     } catch (error) {
-      return error;
+      throw new Error('Bestia!!');
     }
   });
 
