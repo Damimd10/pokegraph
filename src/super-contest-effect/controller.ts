@@ -36,7 +36,6 @@ export const getAll = async (
 export const getSuperContestEffectById = async (
   id: number | string
 ): Promise<ISuperContestEffect> => {
-  console.log('HERE EY', id);
   const getById = getPokeApi(`${endpoint}/${id}`);
   return await getById<IExtraParams, ISuperContestEffect>({ id });
 };
