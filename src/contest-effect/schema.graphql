@@ -1,0 +1,12 @@
+type ContestEffects {
+  id: Int
+  appeal: Int
+  jam: Int
+  effectEntries: [Effect]
+  flavorTextEntries: [FlavorText]
+}
+
+type Query {
+  getAllContestEffects(offset: Int, limit: Int): APIResourceList
+  getContestEffects(id: String): ContestEffects
+}

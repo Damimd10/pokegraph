@@ -7,10 +7,10 @@ import IAPIResourceList from '../models/IAPIResourceList';
 
 const endpoint = 'contest-type';
 
-const getBerryFirmness = getPokeApi(endpoint);
+const getContest = getPokeApi(endpoint);
 
 export const getAll = async (offset: number, limit: number) =>
-  await getBerryFirmness<IPaginationParams, IAPIResourceList>({
+  await getContest<IPaginationParams, IAPIResourceList>({
     offset,
     limit,
   });
