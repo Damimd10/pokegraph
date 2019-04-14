@@ -5,7 +5,7 @@ import getPokeApi, {
 import IContest from '../models/IBerryFlavor';
 import IAPIResourceList from '../models/IAPIResourceList';
 
-const endpoint = 'berry-flavor';
+const endpoint = 'contest-type';
 
 const getBerryFirmness = getPokeApi(endpoint);
 

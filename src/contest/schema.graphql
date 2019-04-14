@@ -5,8 +5,7 @@ type Contest {
   names: [ContestName]
 }
 
-type ContestName {
-  name: String
-  color: String
-  language: NamedAPIResource
+type Query {
+  getAllContest(offset: Int, limit: Int): APIResourceList
+  getContest(id: String!): BerryFlavor
 }
