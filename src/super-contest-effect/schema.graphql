@@ -7,5 +7,5 @@ type SuperContestEffect {
 
 type Query {
   getAllSuperContestEffect(offset: Int, limit: Int): [SuperContestEffect]
-  getSuperContestEffect(id: String): [SuperContestEffect]
+  getSuperContestEffect(id: String): SuperContestEffect
 }

@@ -1,0 +1,11 @@
+type EncounterMethod {
+  id: Int
+  name: String
+  order: Int
+  names: [Name]
+}
+
+type Query {
+  getAllEncounterMethods(offset: Int, limit: Int): [EncounterMethod]
+  getEncounterMethod(id: String): EncounterMethod
+}
