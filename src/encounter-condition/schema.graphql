@@ -1,0 +1,11 @@
+type EncounterCondition {
+  id: Int
+  name: String
+  names: [Name]
+  values: NamedAPIResource
+}
+
+type Query {
+  getAllEncounterConditions(offset: Int, limit: Int): [EncounterCondition]
+  getEncounterCondition(id: String): EncounterCondition
+}
