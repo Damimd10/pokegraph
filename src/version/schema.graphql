@@ -1,0 +1,11 @@
+type Version {
+  id: String
+  name: String
+  names: [Name]
+  versionGroup: NamedAPIResource
+}
+
+type Query {
+  getAllVersions(offset: Int, limit: Int): [Version]
+  getVersion(id: String): Version
+}
