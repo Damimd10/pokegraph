@@ -1,0 +1,11 @@
+type EvolutionTrigger {
+  id: Int
+  name: string
+  names: [Name]
+  pokemonSpecies: [NamedAPIResource]
+}
+
+type Query {
+  getAllEvolutionTriggers(offset: Int, limit: Int): [EvolutionTrigger]
+  getEvolutionTrigger(id: String): EvolutionTrigger
+}
