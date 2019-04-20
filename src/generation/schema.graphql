@@ -1,0 +1,16 @@
+type Generation {
+  id: Int
+  name: String
+  abilities: [NamedAPIResource]
+  names: [Name]
+  mainRegion: NamedAPIResource
+  moves: [NamedAPIResource]
+  pokemonSpecies: [NamedAPIResource]
+  types: [NamedAPIResource]
+  versionGroups: [NamedAPIResource]
+}
+
+type Query {
+  getGenerations(offset: Int, limit: Int): [Generation]
+  getGeneration(id: String): Generation
+}
