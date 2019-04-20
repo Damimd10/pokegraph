@@ -3,7 +3,7 @@ import { IExtraParams, IPaginationParams } from '../shared/service/api';
 import IEvolutionTrigger from '../models/IEvolutionTrigger';
 import IAPIResourceList from '../models/IAPIResourceList';
 
-const endpoint = 'evolution-chain';
+const endpoint = 'evolution-trigger';
 
 const service = new Service(endpoint);
 
