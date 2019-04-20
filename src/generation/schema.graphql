@@ -11,6 +11,6 @@ type Generation {
 }
 
 type Query {
-  getGenerations(offset: Int, limit: Int): [Generation]
+  getAllGenerations(offset: Int, limit: Int): [Generation]
   getGeneration(id: String): Generation
 }

@@ -1,6 +1,6 @@
 type EvolutionTrigger {
   id: Int
-  name: string
+  name: String
   names: [Name]
   pokemonSpecies: [NamedAPIResource]
 }

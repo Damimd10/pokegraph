@@ -15,7 +15,7 @@ type Berry {
 
 type BerryFlavorMap {
   potency: Int
-  flavor: NamedAPIResource
+  flavor: BerryFlavor
 }
 
 type Query {
